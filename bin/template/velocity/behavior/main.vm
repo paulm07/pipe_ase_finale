@@ -1,0 +1,29 @@
+package $package;
+
+#foreach($imp in $imports)
+import $imp;
+#end
+
+import lejos.nxt.*;
+import lejos.robotics.subsumption.*;
+
+import java.util.Arrays;
+import java.util.ArrayList;
+
+/**
+ * The main Class
+ */
+public class Main {
+  //TODO:: to be implemented
+
+  public static void main(String[] args) throws Exception {
+    //TODO:: to be refined
+    ArrayList<Behavior> behaviorsList = new ArrayList();
+#foreach($behavior in $behaviorClasses)
+    behaviorsList.add(new $behavior())
+#end
+
+    Arbitrator arbitrator = new Arbitrator(behaviorsList.toArray(new Behavior[behaviorsList.size()]));
+    arbitrator.start();
+  }
+}

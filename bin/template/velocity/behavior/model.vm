@@ -1,0 +1,31 @@
+package $package;
+
+/**
+ *
+ */
+public class $model {
+#foreach($field in $fields)
+  private $field.getValue() m$field.getKey();
+#end
+
+  public $model() {
+    // default constructor
+  }
+
+  public $model($constructorParams) {
+#foreach($field in $fields)
+    m$field.getKey() = p$field.getKey();
+#end
+  }
+
+#foreach($field in $fields)
+  public $field.getValue() get$field.getKey() {
+    return m$field.getKey();
+  }
+
+  public void set$field.getKey()(final $field.getValue() p$field.getKey()) {
+    m$field.getKey() = p$field.getKey();
+  }
+
+#end
+}
