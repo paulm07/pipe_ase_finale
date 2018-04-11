@@ -1,0 +1,38 @@
+package $package;
+
+import lejos.nxt.*;
+import lejos.robotics.subsumption.*;
+
+
+public class $behavior implements Behaviour {
+  private AtomicBoolean isSuppressed = new AtomicBoolean(false);
+
+  @Override
+  public boolean takeControl() {
+    boolean shouldControl = false;
+    //TODO:: evaluate precondition
+    //PRE:: $precondition
+    //Fix-Me: the following line need to be verified
+    //shouldControl = $modifiedPre;
+    return shouldControl;
+  }
+
+
+  @Override
+  public boolean suppress() {
+    isSuppressed.getAndSet(true);
+  }
+
+
+  @Override
+  public void action() {
+    isSuppressed.getAndSet(false);
+    //TODO:: implement the post condition;
+    //Fix-Me:: PostConditions
+#foreach($line in $postConditions)
+    // $line
+#end
+  }
+}
+
+

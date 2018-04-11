@@ -1,0 +1,340 @@
+===============================================================================================
+||*******************************************************************************************||
+||*									                     	SAFE BUS 3                   											*||
+||*******************************************************************************************||
+===============================================================================================
+
+===============================================================================================
+Run-1:
+Max Depth: 5000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f1
+===============================================================================================
+State-vector 372 byte, depth reached 3983, errors: 1
+   963946 states, stored
+   431825 states, matched
+  1395771 transitions (= stored+matched)
+  5431731 atomic steps
+hash conflicts:      5845 (resolved)
+
+Stats on memory usage (in Megabytes):
+  353.008	equivalent memory usage for states (stored*(State-vector + overhead))
+  346.658	actual memory usage for states (compression: 98.20%)
+         	state-vector as stored = 365 byte + 12 byte overhead
+   64.000	memory used for hash table (-w24)
+    0.687	memory used for DFS stack (-m20000)
+  410.878	total actual memory 
+
+===============================================================================================
+Run-2:
+Max Depth: 5000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f1
+===============================================================================================
+State-vector 384 byte, depth reached 4999, errors: 0
+  5342313 states, stored
+  2656535 states, matched
+  7998848 transitions (= stored+matched)
+ 18041748 atomic steps
+hash conflicts:    172926 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 2017.551	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1990.711	actual memory usage for states (compression: 98.67%)
+         	state-vector as stored = 379 byte + 12 byte overhead
+   64.000	memory used for hash table (-w24)
+    0.172	memory used for DFS stack (-m5000)
+    6.922	memory lost to fragmentation
+ 2047.961	total actual memory usage
+
+
+
+pan: elapsed time 14.7 seconds
+No errors found -- did you verify all claims?
+
+===============================================================================================
+Run-3:
+Max Depth: 50000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f1
+===============================================================================================
+State-vector 384 byte, depth reached 49999, errors: 0
+  5337996 states, stored
+  2822890 states, matched
+  8160886 transitions (= stored+matched)
+ 15965021 atomic steps
+hash conflicts:    168755 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 2015.921	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1989.127	actual memory usage for states (compression: 98.67%)
+         	state-vector as stored = 379 byte + 12 byte overhead
+   64.000	memory used for hash table (-w24)
+    1.717	memory used for DFS stack (-m50000)
+    6.901	memory lost to fragmentation
+ 2047.943	total actual memory usage
+
+
+
+pan: elapsed time 15.1 seconds
+No errors found -- did you verify all claims?
+
+===============================================================================================
+Run-4:
+Max Depth: 500000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f1
+===============================================================================================
+State-vector 384 byte, depth reached 499999, errors: 0
+  5295330 states, stored
+  2597807 states, matched
+  7893137 transitions (= stored+matched)
+ 16941931 atomic steps
+hash conflicts:    182545 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1999.808	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1973.492	actual memory usage for states (compression: 98.68%)
+         	state-vector as stored = 379 byte + 12 byte overhead
+   64.000	memory used for hash table (-w24)
+   17.166	memory used for DFS stack (-m500000)
+    6.695	memory lost to fragmentation
+ 2047.963	total actual memory usage
+
+
+
+pan: elapsed time 16.1 seconds
+No errors found -- did you verify all claims?
+
+
+===============================================================================================
+Run-5:
+Max Depth: 5000000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f2
+===============================================================================================
+Full statespace search for:
+	never claim         	+ (f2)
+	assertion violations	+ (if within scope of claim)
+	cycle checks       	- (disabled by -DSAFETY)
+	invalid end states	- (disabled by never claim)
+
+State-vector 384 byte, depth reached 4376418, errors: 0
+  4870009 states, stored
+  1925683 states, matched
+  6795692 transitions (= stored+matched)
+ 18645557 atomic steps
+hash conflicts:    189772 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1839.183	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1817.014	actual memory usage for states (compression: 98.79%)
+         	state-vector as stored = 379 byte + 12 byte overhead
+   64.000	memory used for hash table (-w24)
+  171.661	memory used for DFS stack (-m5000000)
+    4.710	memory lost to fragmentation
+ 2047.966	total actual memory usage
+
+
+
+pan: elapsed time 19.8 seconds
+
+===============================================================================================
+Run-6:
+Max Depth: 5000000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f3
+===============================================================================================
+Full statespace search for:
+	never claim         	+ (f3)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 388 byte, depth reached 4305900, errors: 0
+  4773764 states, stored
+  1886854 states, matched
+  6660618 transitions (= stored+matched)
+ 18300539 atomic steps
+hash conflicts:    177337 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1839.257	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1816.294	actual memory usage for states (compression: 98.75%)
+         	state-vector as stored = 383 byte + 16 byte overhead
+   64.000	memory used for hash table (-w24)
+  171.661	memory used for DFS stack (-m5000000)
+    3.990	memory lost to fragmentation
+ 2047.966	total actual memory usage
+
+pan: elapsed time 20.4 seconds
+
+
+
+===============================================================================================
+||*******************************************************************************************||
+||*										               SAFE BUS 6										                        	*||
+||*******************************************************************************************||
+===============================================================================================
+Run-7:
+Max Depth: 5000000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f1
+===============================================================================================
+Full statespace search for:
+	never claim         	+ (f1)
+	assertion violations	+ (if within scope of claim)
+	cycle checks       	- (disabled by -DSAFETY)
+	invalid end states	- (disabled by never claim)
+
+State-vector 876 byte, depth reached 2816925, errors: 0
+  2243893 states, stored
+   855938 states, matched
+  3099831 transitions (= stored+matched)
+  9811061 atomic steps
+hash conflicts:     36535 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1900.269	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1815.153	actual memory usage for states (compression: 95.52%)
+         	state-vector as stored = 836 byte + 12 byte overhead
+   64.000	memory used for hash table (-w24)
+  171.661	memory used for DFS stack (-m5000000)
+    2.848	memory lost to fragmentation
+ 2047.966	total actual memory usage
+
+pan: elapsed time 17.6 seconds
+
+===============================================================================================
+Run-8:
+Max Depth: 5000000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f2
+===============================================================================================
+Full statespace search for:
+	never claim         	+ (f2)
+	assertion violations	+ (if within scope of claim)
+	cycle checks       	- (disabled by -DSAFETY)
+	invalid end states	- (disabled by never claim)
+
+State-vector 876 byte, depth reached 2816925, errors: 0
+  2243893 states, stored
+   855938 states, matched
+  3099831 transitions (= stored+matched)
+  9811061 atomic steps
+hash conflicts:     35751 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1900.269	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1815.153	actual memory usage for states (compression: 95.52%)
+         	state-vector as stored = 836 byte + 12 byte overhead
+   64.000	memory used for hash table (-w24)
+  171.661	memory used for DFS stack (-m5000000)
+    2.848	memory lost to fragmentation
+ 2047.966	total actual memory usage
+
+pan: elapsed time 18.7 seconds
+
+===============================================================================================
+Run-9:
+Max Depth: 5000000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f3
+===============================================================================================
+Full statespace search for:
+	never claim         	+ (f3)
+	assertion violations	+ (if within scope of claim)
+	non-progress cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 880 byte, depth reached 2780859, errors: 0
+  2215182 states, stored
+   844986 states, matched
+  3060168 transitions (= stored+matched)
+  9685517 atomic steps
+hash conflicts:     34495 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1892.856	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1821.403	actual memory usage for states (compression: 96.23%)
+         	state-vector as stored = 846 byte + 16 byte overhead
+   64.000	memory used for hash table (-w24)
+  171.661	memory used for DFS stack (-m5000000)
+    9.098	memory lost to fragmentation
+ 2047.966	total actual memory usage
+
+pan: elapsed time 17.9 seconds
+
+
+
+
+===============================================================================================
+||*******************************************************************************************||
+||*								    SAFE BUS 3 Process Based								*||
+||*******************************************************************************************||
+===============================================================================================
+Run-10:
+Max Depth: 5000000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f1
+===============================================================================================
+Full statespace search for:
+	never claim         	+ (f1)
+	assertion violations	+ (if within scope of claim)
+	cycle checks       	- (disabled by -DSAFETY)
+	invalid end states	- (disabled by never claim)
+
+State-vector 680 byte, depth reached 4999999, errors: 0
+  3012847 states, stored
+ 34656288 states, matched
+ 37669135 transitions (= stored+matched)
+3.445793e+08 atomic steps
+hash conflicts:   1293192 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1988.306	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1813.357	actual memory usage for states (compression: 91.20%)
+         	state-vector as stored = 619 byte + 12 byte overhead
+   64.000	memory used for hash table (-w24)
+  171.661	memory used for DFS stack (-m5000000)
+    1.053	memory lost to fragmentation
+ 2047.966	total actual memory usage
+
+pan: elapsed time 77.7 seconds
+
+
+===============================================================================================
+Run-11:
+Max Depth: 5000000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f2
+===============================================================================================
+Full statespace search for:
+	never claim         	+ (f2)
+	assertion violations	+ (if within scope of claim)
+	cycle checks       	- (disabled by -DSAFETY)
+	invalid end states	- (disabled by never claim)
+
+State-vector 680 byte, depth reached 4999999, errors: 0
+  3012847 states, stored
+ 34656288 states, matched
+ 37669135 transitions (= stored+matched)
+3.445793e+08 atomic steps
+hash conflicts:   1300740 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1988.306	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1813.357	actual memory usage for states (compression: 91.20%)
+         	state-vector as stored = 619 byte + 12 byte overhead
+   64.000	memory used for hash table (-w24)
+  171.661	memory used for DFS stack (-m5000000)
+    1.053	memory lost to fragmentation
+ 2047.966	total actual memory usage
+
+pan: elapsed time 74.4 seconds
+
+===============================================================================================
+Run-12:
+Max Depth: 5000000; Max State Space Size: 2000E+3; Max Memory: 2048 MB; Never claim: f3
+===============================================================================================
+Extra compilation flags : -DNFAIR=5 (too many processes 15)
+Full statespace search for:
+	never claim         	+ (f3)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 684 byte, depth reached 4999999, errors: 0
+  2975570 states, stored
+ 34189219 states, matched
+ 37164789 transitions (= stored+matched)
+3.4023055e+08 atomic steps
+hash conflicts:   1270563 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1986.407	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1812.981	actual memory usage for states (compression: 91.27%)
+         	state-vector as stored = 623 byte + 16 byte overhead
+   64.000	memory used for hash table (-w24)
+  171.661	memory used for DFS stack (-m5000000)
+ 2047.966	total actual memory usage
+
+pan: elapsed time 102 seconds

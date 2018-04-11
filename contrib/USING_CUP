@@ -1,0 +1,4 @@
+
+java –jar java-cup-11a.jar FormulaParser.cup
+
+jflex (just run the jar file in folder lib, which inside jflex folder)
